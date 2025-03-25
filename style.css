@@ -1,0 +1,110 @@
+/* グリッドレイアウト設定 */
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 110px 300px 1fr 1200px;
+    grid-template-areas: 
+        "header header header"
+        "css css css"
+        "preview column2 column3"
+        "js js js";
+    gap: 10px;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    font-family: "Times New Roman", serif;
+}
+
+/* ヘッダー */
+.html {
+    grid-area: header;
+    background-color: #ac1622;
+    font-size: 3em;
+    font-weight: 700; 
+    color: black; 
+    -webkit-text-stroke: 2px white;
+    text-align: center;
+    font-family: "Impact", sans-serif;
+    position: relative;
+}
+
+/* 画像付き装飾 */
+.sticker {
+    width: 100px;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+.sticker-left {
+    width: 130px;
+    position: absolute;
+    top: 10px;
+    left: 35px;
+}
+
+/* 背景画像 */
+.css {
+    grid-area: css;
+    background-image: url('image copy 4.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+/* JavaScriptエリア */
+.js {
+    grid-area: js;
+    background-color: rgb(225, 206, 187);
+    font-size: 2em;
+    text-align: center;
+}
+
+/* 作り方の説明 */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    text-align: center;
+}
+
+.step img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 共通カードデザイン */
+.preview, .column2, .column3 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preview h2, .column2 h2, .column3 h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ac1622;
+    margin-bottom: 10px;
+}
+
+.preview p, .column2 p, .column3 p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.preview strong, .column2 strong, .column3 strong {
+    color: #ac1622;
+}
